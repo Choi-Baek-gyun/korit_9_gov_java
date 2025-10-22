@@ -4,14 +4,14 @@ import java.util.Objects;
 
 public class PasswordEncoder {
 
-    private static final String secrete = "암호화비밀번호";
+    private static final String secret = "암호화비밀번호";
 
     public static String encode(String str) {
         if (Objects.isNull(str)) {
             return null;
         }
         long hash = Integer.toUnsignedLong(Objects.hash(str));
-        long encodedHash = hash + Objects.hash(secrete);
+        long encodedHash = hash + Objects.hash(secret);
         return Long.toHexString(encodedHash);
     }
 
