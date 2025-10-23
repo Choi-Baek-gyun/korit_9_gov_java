@@ -2,22 +2,22 @@ package com.korit.study.ch22.service;
 
 import com.korit.study.ch22.dto.SignupDto;
 import com.korit.study.ch22.entity.User;
-import com.korit.study.ch22.repository.UserRepository;
+import com.korit.study.ch22.repository.UserRepositoryImpl;
 
 import java.util.Objects;
 
 public class SignupService {
     // 1. instance static 변수 정의
     private static SignupService instance;
-    private UserRepository userRepository;
+    private UserRepositoryImpl userRepository;
 
-    private SignupService(UserRepository userRepository) {
+    private SignupService(UserRepositoryImpl userRepository) {
         this.userRepository = userRepository;
     }
 
     public static SignupService getInstance() {
         if (Objects.isNull(instance)) {
-            instance = new SignupService(UserRepository.getInstance());
+            instance = new SignupService(UserRepositoryImpl.getInstance());
         }
         return instance;
     }

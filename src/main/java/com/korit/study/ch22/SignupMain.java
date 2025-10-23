@@ -2,11 +2,10 @@ package com.korit.study.ch22;
 
 import com.korit.study.ch22.dto.SigninDto;
 import com.korit.study.ch22.dto.SignupDto;
-import com.korit.study.ch22.repository.UserRepository;
+import com.korit.study.ch22.repository.UserRepositoryImpl;
 import com.korit.study.ch22.service.SigninServiceImpl;
 import com.korit.study.ch22.service.SignupService;
 
-import javax.naming.CompositeName;
 import java.util.Scanner;
 
 public class SignupMain {
@@ -84,7 +83,7 @@ public class SignupMain {
 
             } else if ("3".equals(selectedMenu)) {
                 System.out.println("[ 가입된 회원 전체 조회 ]");
-                System.out.println(UserRepository.getInstance().toString());
+                System.out.println(UserRepositoryImpl.getInstance().toString());
             }
         }
 
