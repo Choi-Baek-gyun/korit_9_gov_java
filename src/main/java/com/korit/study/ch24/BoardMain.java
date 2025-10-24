@@ -23,7 +23,7 @@ class Board {
     public String toString() {
         return "\n\t{\n" +
                 "\t\t\"title\" :'" + title + "\",\n" +
-                  writer.toString() +
+                writer.toString() +
                 "\n\t\t\"content\": " + content + "\"\n" +
                 "\t\t\"comment\" :" + comment.toString() + "\n\t}";
     }
