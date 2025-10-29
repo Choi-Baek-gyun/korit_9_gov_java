@@ -41,7 +41,7 @@ class UserEntity {
     }
 }
 
-public class FunvtionStudyMain {
+public class FunctionStudyMain {
     public static void main(String[] args) {
         Function<Map<String, Object>, Map<String, Object>> passwordEncoding = data -> {
             data.replace("password", Objects.hash(data.get("password")) * 10);
